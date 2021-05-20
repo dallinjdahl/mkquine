@@ -1,0 +1,5 @@
+This is a quine generator. Given any c file on stdin, this program
+will add a function called quine to it on stdout, which prints it's own source
+code. So, if you need to print your own source code, just call quine
+somewhere in your program, and this program will fill in the
+declaration and implementation.
