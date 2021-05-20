@@ -5,8 +5,7 @@
 char *intro = "void quine();\n";
 char *out0 = "\nvoid quine() {\n\tchar c[] = {9, 10, 34, 92};\n\tchar *s = \"";
 char *out1 = "\";\n\tprintf(s";
-char *out2 = ");%c}%c";
-char *out3 = ");\n}\n";
+char *out2 = ");\n}\n";
 char *sbuf;
 uint8_t *ibuf;
 char *obuf;
@@ -137,7 +136,10 @@ int main(int argc, char **argv) {
 	ipush(1);
 	ipush(1);
 	cprint();
-	sprints(out3);
+	sprints(out2);
 	printf("%s", obuf);
+	free(ibuf);
+	free(obuf);
+	free(sbuf);
 	return 0;
 }
